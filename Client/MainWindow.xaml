@@ -1,0 +1,64 @@
+﻿<Window x:Class="HiaChat_Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HiaChat_Client"
+        mc:Ignorable="d"
+        Title="HiaChat" Height="600" Width="755" WindowStartupLocation="CenterScreen" Closed="Window_Closed">
+    <DockPanel>
+        <Label Name="lbname" Content="昵称：" Height="48" Background="#40a69b" Foreground="White" VerticalAlignment="Top" DockPanel.Dock="Top" FontSize="24" VerticalContentAlignment="Center"/>
+        <DockPanel DockPanel.Dock="Left" MinWidth="200" Background="AliceBlue">
+            <TextBox Name="tbsearch" KeyDown="SearchFriend_KeyDown" DockPanel.Dock="Top" Height="30" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                <TextBox.Resources>
+                    <VisualBrush x:Key="HintText" TileMode="None" Opacity="0.5" Stretch="None" AlignmentX="Center">
+                        <VisualBrush.Visual>
+                            <TextBlock FontStyle="Italic" Text="输入好友号码并回车"/>
+                        </VisualBrush.Visual>
+                    </VisualBrush>
+                </TextBox.Resources>
+                <TextBox.Style>
+                    <Style TargetType="TextBox">
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="{x:Null}">
+                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                            </Trigger>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="Background" Value="{StaticResource HintText}"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <ListBox x:Name="listboxfriend" DockPanel.Dock="Bottom" MouseDown="Listboxfriend_MouseDown">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Name}" FontSize="32"    />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Bottom" MinHeight="150" Background="White">
+            <Button Name="send" Content="发送" 
+                    VerticalContentAlignment="Center" VerticalAlignment="Bottom" HorizontalAlignment="Right" 
+                    DockPanel.Dock="Bottom" 
+                    Height="32" Width="64"
+                    Background="#40a69b" Foreground="White" MinWidth="64" MinHeight="32" Margin="0,0,15,15"
+                    MouseDown="Send_MouseDown">
+                
+            </Button>
+            <RichTextBox DockPanel.Dock="Top" BorderBrush="White" BorderThickness="0" >
+                
+            </RichTextBox>
+        </DockPanel>
+        <DockPanel DockPanel.Dock="Right" Background="AntiqueWhite">
+            <Grid DockPanel.Dock="Bottom" MinHeight="32">
+                
+            </Grid>
+            <RichTextBox BorderBrush="White" IsReadOnly="True" BorderThickness="0" >
+                
+            </RichTextBox>
+        </DockPanel>
+    </DockPanel>
+</Window>

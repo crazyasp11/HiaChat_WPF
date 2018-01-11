@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiaChat_WPF", "HiaChat_WPF\HiaChat_WPF.csproj", "{3ADE3EA0-2152-4E58-BC7E-5A95E219348E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiaChat_Server", "HiaChat_WPF\HiaChat_Server.csproj", "{3ADE3EA0-2152-4E58-BC7E-5A95E219348E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiaChat_Client", "Client\HiaChat_Client.csproj", "{C4ABE99B-A7FC-4334-AB21-9F2F046B0284}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3ADE3EA0-2152-4E58-BC7E-5A95E219348E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3ADE3EA0-2152-4E58-BC7E-5A95E219348E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3ADE3EA0-2152-4E58-BC7E-5A95E219348E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4ABE99B-A7FC-4334-AB21-9F2F046B0284}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4ABE99B-A7FC-4334-AB21-9F2F046B0284}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4ABE99B-A7FC-4334-AB21-9F2F046B0284}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4ABE99B-A7FC-4334-AB21-9F2F046B0284}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
